@@ -34,6 +34,8 @@ public class EmployeeValidator {
             }
         }
 
+        return errors;
+
     }
 
     //社員番号の確認を行うメソッド

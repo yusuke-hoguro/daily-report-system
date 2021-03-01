@@ -32,7 +32,7 @@ import javax.persistence.Table;
             ),
     //テーブルからデータの数を取得するJPQL
     @NamedQuery(
-            name = "getAllEmployeesCount",
+            name = "getEmployeesCount",
             query = "SELECT COUNT(e) FROM Employee AS e"
             ),
     //指定されて社員番号がデータベースに存在しているかを調べる
