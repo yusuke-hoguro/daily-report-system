@@ -7,6 +7,7 @@ import javax.xml.bind.DatatypeConverter;
 
 public class EncryptUtil {
 
+    //SHA256 でハッシュ化
     public static String getPasswordEncrypt(String plain_p, String pepper) {
         String ret = "";
 
