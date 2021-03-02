@@ -11,7 +11,7 @@
     <body>
         <div id = "wrapper">
             <div id = "header">
-                <h1>日報管理アプリケーション</h1>
+                <h1>日報管理システム</h1>
             </div>
             <div id = "content">
                 <%--HTMLのタグが入る可能性があるのでJSTL使用しない --%>
