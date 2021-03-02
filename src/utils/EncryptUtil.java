@@ -5,6 +5,7 @@ import java.security.NoSuchAlgorithmException;
 
 import javax.xml.bind.DatatypeConverter;
 
+//暗号化したパスワードを作成する
 public class EncryptUtil {
 
     //SHA256 でハッシュ化
