@@ -11,7 +11,27 @@
     <body>
         <div id = "wrapper">
             <div id = "header">
-                <h1>日報管理システム</h1>
+                <div id="header_menu">
+                    <h1><a href="<c:out value='/'/>">日報管理システム</a></h1>&nbsp;&nbsp;&nbsp;
+                    <%-- ログインしていたら表示 --%>
+                    <c:if test="${sessionScope.login_employee != null}">
+
+                        <%-- 管理者の場合のみ表示 --%>
+                        <c:if test="${sessionScope.login_employee.admin_flag == 1}">
+                            <a href="<c:url value='/employees/index'/>" >従業員管理</a>&nbsp;
+                        </c:if>
+
+                        <a href = "<c:url value='/reports/index' />">日報管理</a>&nbsp;
+
+                    </c:if>
+                </div>
+                <%-- ログインしていたら表示 --%>
+                <c:if test="${sessionScope.login_employee != null}">
+                    <div id="employee_name">
+                        <c:out value="${sessionScope.login_employee.name}" />&nbsp;さん&nbsp;&nbsp;&nbsp;
+                        <a href="<c:url value='/logout' />">ログアウト</a>
+                    </div>
+                </c:if>
             </div>
             <div id = "content">
                 <%--HTMLのタグが入る可能性があるのでJSTL使用しない --%>
