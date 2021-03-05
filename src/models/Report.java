@@ -33,7 +33,18 @@ import javax.persistence.Table;
     @NamedQuery(
             name = "getReportsCount",
             query = "SELECT COUNT(r) FROM Report AS r"
+            ),
+    //テーブルからIDの降順でデータをすべて取得するJPQL
+    @NamedQuery(
+            name = "getMyAllReports",
+            query = "SELECT r FROM Report AS r WHERE r.employee = :employee ORDER BY r.id DESC"
+            ),
+    //テーブルからデータの数を取得するJPQL
+    @NamedQuery(
+            name = "getMyReportsCount",
+            query = "SELECT COUNT(r) FROM Report AS r WHERE r.employee = :employee"
             )
+
 })
 @Entity
 public class Report {
