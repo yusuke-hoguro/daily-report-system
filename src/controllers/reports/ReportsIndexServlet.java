@@ -36,7 +36,7 @@ public class ReportsIndexServlet extends HttpServlet {
         EntityManager em = DBUtil.createEntityManager();
 
         //ページネーション機能
-        int page;
+        int page = 1;
         try{
             page = Integer.parseInt(request.getParameter("page"));
         }catch(Exception e){

@@ -38,7 +38,7 @@ public class EmployeesIndexServlet extends HttpServlet {
         //ページネーション機能 ページの初期値設定
         int page = 1;
         try{
-            page = Integer.parseInt(request.getParameter("pase"));
+            page = Integer.parseInt(request.getParameter("page"));
         }catch(NumberFormatException e){}
 
         List<Employee> employees = em.createNamedQuery("getAllEmployees", Employee.class)
